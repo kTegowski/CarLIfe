@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #3B73F1;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.view.CarHistoryController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="800.0" prefWidth="1315.0">
+         <children>
+            <AnchorPane prefHeight="800.0" prefWidth="440.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="96.0" layoutY="38.0" prefHeight="57.0" prefWidth="96.0" text="Marka pojazdu" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="109.0" layoutY="90.0" prefHeight="35.0" prefWidth="70.0" text="Model auta" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="102.0" layoutY="195.0" prefHeight="35.0" prefWidth="76.0" text="Rok produkcji" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="109.0" layoutY="160.0" prefHeight="35.0" prefWidth="70.0" text="Numer VIN" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="78.0" layoutY="125.0" prefHeight="35.0" prefWidth="122.0" text="Numer rejestracyjny" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="95.0" layoutY="300.0" prefHeight="35.0" prefWidth="89.0" text="Rodzaj nadwozia" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="108.0" layoutY="230.0" prefHeight="35.0" prefWidth="63.0" text="Typ paliwa" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="73.0" layoutY="265.0" prefHeight="35.0" prefWidth="132.0" text="Pojemność skokowa" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="MarkLabel" alignment="CENTER" layoutX="224.0" layoutY="60.0" prefHeight="19.0" prefWidth="132.0" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label fx:id="ModelLabel" alignment="CENTER" layoutX="224.0" layoutY="100.0" prefHeight="19.0" prefWidth="132.0" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label fx:id="RegistrationLabel" alignment="CENTER" layoutX="224.0" layoutY="135.0" prefHeight="19.0" prefWidth="132.0" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label fx:id="VINLabel" alignment="CENTER" layoutX="224.0" layoutY="168.0" prefHeight="19.0" prefWidth="132.0" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label fx:id="ProductionLabel" alignment="CENTER" layoutX="224.0" layoutY="203.0" prefHeight="19.0" prefWidth="132.0" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label fx:id="FUelTypeLabel" alignment="CENTER" layoutX="224.0" layoutY="238.0" prefHeight="19.0" prefWidth="132.0" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label fx:id="EngineCapacityLabel" alignment="CENTER" layoutX="224.0" layoutY="273.0" prefHeight="19.0" prefWidth="132.0" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label fx:id="BodyTypeLabel" alignment="CENTER" layoutX="224.0" layoutY="308.0" prefHeight="19.0" prefWidth="132.0" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <LineChart fx:id="Chart" layoutX="7.0" layoutY="356.0" onDragDetected="#updateChart">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yAxis" side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <Button fx:id="updateCHart" layoutX="55.0" layoutY="750.0" mnemonicParsing="false" onAction="#updateChart" prefHeight="35.0" prefWidth="106.0" text="Aktualizuj">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="800.0" prefWidth="440.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="66.0" prefHeight="57.0" prefWidth="380.0" text="Ostatnie wydarzenia z życia auta:" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="FirstEvent" alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="171.0" prefHeight="92.0" prefWidth="256.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="SecondEvent" alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="295.0" prefHeight="92.0" prefWidth="256.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ThirdEvent" alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="424.0" prefHeight="92.0" prefWidth="256.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="fourthEvent" alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="568.0" prefHeight="92.0" prefWidth="256.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Line endX="100.0" layoutX="1.0" layoutY="181.0" startX="100.00006103515625" startY="538.5643310546875" stroke="WHITE" />
+                  <Line endX="-60.19794464111328" endY="-46.554443359375" layoutX="201.0" layoutY="720.0" startX="-100.0" stroke="WHITE" />
+                  <Line endX="-108.29279327392578" endY="-21.68316650390625" layoutX="209.0" layoutY="740.0" startX="-149.9405517578125" startY="-61.802001953125" stroke="WHITE" />
+                  <Label layoutX="33.0" layoutY="386.0" rotate="-90.0" text="Czas" textFill="WHITE">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane prefHeight="801.0" prefWidth="440.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="154.0" prefHeight="35.0" prefWidth="158.0" text="Data ostatniego przeglądu:" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="208.0" prefHeight="35.0" prefWidth="195.0" text="Data opłacenia ubezpieczenia OC" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="270.0" prefHeight="35.0" prefWidth="195.0" text="Data ostatniej wymiany oleju:" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="PrzegladLast" alignment="CENTER" contentDisplay="CENTER" layoutX="257.0" layoutY="154.0" prefHeight="35.0" prefWidth="89.0" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="OCDate" alignment="CENTER" contentDisplay="CENTER" layoutX="257.0" layoutY="208.0" prefHeight="35.0" prefWidth="89.0" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="OilLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="257.0" layoutY="270.0" prefHeight="35.0" prefWidth="89.0" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="addNew" layoutX="121.0" layoutY="504.0" mnemonicParsing="false" onAction="#addNewAction" prefHeight="67.0" prefWidth="159.0" text="Dodaj nowe wydarzenie">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="227.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@LogoCarLIfe.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="saveToJson" layoutX="121.0" layoutY="619.0" mnemonicParsing="false" onAction="#saveToJson" prefHeight="67.0" prefWidth="159.0" text="Zapisz historię do pliku">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
